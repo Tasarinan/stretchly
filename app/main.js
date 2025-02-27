@@ -310,7 +310,13 @@ function startI18next () {
     })
 }
 
-i18next.on('languageChanged', function (lng) {
+i18next.on('languageChanged', async function (lng) {
+  if (welcomeWin) {
+    welcomeWin.send('translate', await settingsToSend())
+  }
+  if (preferencesWin) {
+    preferencesWin.send('translate', await settingsToSend())
+  }
   updateTray()
   loadIdeas()
 })
@@ -545,9 +551,9 @@ function createWelcomeWindow (isAppStart = true) {
     const modalPath = path.join('file://', __dirname, '/welcome.html')
     welcomeWin = new BrowserWindow({
       x: displaysX(-1, 1000),
-      y: displaysY(-1, 950),
+      y: displaysY(-1, 750),
       width: 1000,
-      height: 950,
+      height: 750,
       autoHideMenuBar: true,
       icon: windowIconPath(),
       backgroundColor: 'EDEDED',
