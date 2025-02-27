@@ -73,8 +73,8 @@ body[dir=rtl] .welcome input[type="radio"] + label:before {
 }
 
 select {
-  height: 400px;
+  min-height: 50vh;
   padding-left: 8px;
-  width: 70%;
   text-align: center;
+  width: 70%;
 }
