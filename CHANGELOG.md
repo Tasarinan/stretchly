@@ -5,11 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Yiddish translations
 
-## Changed
+### Changed
 - remove flags in Welcome window
+- updated many translations
 
-## Fixed
+### Fixed
 - hide close/minimize actions on Break window on macOS
 - issue when not all strings correctly translate after language change
 
